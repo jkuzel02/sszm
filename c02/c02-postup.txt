@@ -1,0 +1,16 @@
+Osnova
+======
+1.) Zapojení
+2.) Reset konfigurace
+3.) IP adresa
+4.) DHCP server
+5.) Usernames + groups
+6.) Skiny pro WebFig
+7.) MAC telnet
+8.) Routing
+9.) IP neighbors
+10.) MAC server
+11.) IP services
+12.) Safe mode
+13.) NAT
+14.) Zálohy konfigurace

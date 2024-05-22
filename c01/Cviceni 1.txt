@@ -1,0 +1,44 @@
+Konfigurace domaciho routeru MikroTik hAP ac2
+
+Pouzivame VM Win11 - predpokladana dobra kompabilita s OS Windows pri praci s WinBoxem.
+
+ve VM spustime WinBox.exe
+
+Neighbors -> Refresh
+- je treba byt pripojeni, kabelem do P17-24 (cervene oznacene porty)
+
+Odkrizkovat zakladni zmenu hesla
+
+System -> Reset Configuration -> No Default Configuration -> Reset Configuration
+
+Nastavit Bridge (logicky switch pro LAN) (eth2-5)
+
+Bridge -> Bridge -> + -> nastavit Name -> Apply/OK
+Bridge -> Ports -> + -> nastavit spravovany port -> Apply/OK
+
+Nastavit IP adresu - 192.168.__.1/24 (__ = cislo PC - v mem pripade 21)
+
+IP -> Addresses -> + -> vyplnit adresu, vcetne prefixu (v nasem pripade 192.168.21.1/24) a v interface zvolit Name bridge
+
+Nastavit DHCP server
+
+IP -> DHCP server -> DHCP Setup -> DHCP Server Interface <nazev bridge> -> nechat se dale provest pruvodcem
+
+Nastavit NAT
+Zakladni nastaveni LAN
+
+Safemode - kdyby se nam stalo, ze nas nase cinnost odpoji, tak to winbox pozna a vrati nas do predchoziho nastaveni
+
+Upgrade packages
+
+Files -> Drag & Drop soubory balicku, ktere chceme nainstalovat
+System -> Reboot
+System -> RouterBOARD -> Upgrade a opet Reboot
+
+Nastaveni casu:
+System -> Clock
+
+wlan1 2,4GHz
+
+wlan2 5GHz
+

@@ -1,0 +1,2 @@
+bridge -> ports -> STP -> edge port (MT nazev pro portfast)
+bridge -> STP -> priority, zadavam vzdy prvni hodnotu hex a po ni musi nasledovat 3x nula = vzpomenout si na to co Balej zminoval

@@ -1,0 +1,27 @@
+Centralizovany management APs = CAPsMAN
+
+prejdu do "WiFi" v levem hlavnim radkovem menu, dale:
+1.) Nastavit Security profile: v zalozce "Security" -> "+" (Name, Auth. Types, Passphrase)
+2.) Nastavit Configuration profile: v zalozce "Configuration" -> "+" (Name:{cfg1}, SSID, Country a zvolit security profile, ktery jsme nakonfigurovali)
+
+konfiguracni profil pote nastavim na interface (wifi1 nebo wifi2), jejich rozkliknutim a v jejich zalozce "Configuration" zvolim prislusny Config. profile
+
+Nastaveni CAPsMAN:
+
+"Remote CAP" -> "CAPsMAN" -> Enabled (tick)
+
+Prirazeni AP k rizeni CAPsMANem:
+
+"Wifi" -> "CAP" -> Enabled (tick) & Discovery Interfaces nastavit na interface, ktery ma naslouchat,
+Certificate: request
+CAPsMAN Address: adresa CAPsMAN serveru
+
+nasledne interface, ktery chci mit nakonfigurovany CAPsMANem nastavim:
+(napr.) wifi1 -> "Configuration" -> Manager: capsman -> "Datapath" -> Bridge: pridam bridge, do ktereho nasledne wifi port bude patrit
+
+
+pokud chci nastavit management komunikaci na sifrovanou => zvolim v "Remote CAP" => "CAPsMAN" => Require Peer Certificate (tick) {vyuzivaji se defaultne vygenerovane ssl certifikaty pro AP, tudiz nic vic neni potreba specifikovat}
+
+PROVISIONING
+pro propagaci jineho nastaveni, si mohu vytvorit jiny config. profile a ten provisionovat
+Nejprve vytvorim novy config. profile pote prejdu na zalozku "Provisioning" -> "+" -> Supported Bands: {nastavim pasmo, pro ktere ma byt konfigurace provisionovana} Action: create dynamic enabled, Master Configuration: {nazev noveho config. profile} a nasledne se uklikam k smrti na tlacitku "Provision"

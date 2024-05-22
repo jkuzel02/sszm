@@ -1,0 +1,17 @@
+1) Zapojení zaøízení
+2) Reset vıchozí konfigurace do prázdné konfigurace
+3) Vytvoøení bridge pro porty ether2-ether5 a wlan1
+4) Nastavení IP adresy
+5) Nastavení DHCP serveru
+6) SSH a terminal
+7) Ovládání pøes CLI
+8) Konfigurace zaøízení pøes WebFig
+9) Aktualizace a rozšiøující balíèky
+10) Nastavení èasu a èasové zóny
+11) Nastavení identity
+12) WiFi pro místní sí
+13) WiFi propoj k ISP
+14) IP adresa pro bezdrátové rozhraní
+15) Nastavení vıchozí route
+16) Nastavení NAT
+17) Automatickı update pøes Internet

@@ -1,0 +1,23 @@
+Provádějte na obou zařízeních, pokud není u úkolu uvedeno jinak.
+
+1) Zapojení zařízení
+2) Reset konfigurace do prázdné konfigurace
+3) Nastavení názvu zařízení stejně jako váš login+VM/hAP
+4) VM MikroTik: vytvoření bridge pro porty ether2 a ether3
+5) Nastavení IP adres a statických route
+6) hAP ac2: vytvoření pool pro DHCP (192.168.__.20-192.168.__.30)
+7) hAP ac2: nastavení network pro DHCP (def. route, libovolný DNS a NTP server)
+8) hAP ac2: vytvoření DHCP server pro vzdálenou síť (192.168.__.0/24)
+9) VM MikroTik: nastavení DHCP relay pro místní síť (192.168.__.0/24), DHCP server má adresu 172.16.__.1
+10) hAP ac2: získat na PC IP adresu z DHCP serveru a definovat pevné přidělení adresy (vazba MAC-IP adresa)
+11) VM MikroTik: vytvořit novou skupinu spravci (přístup jen přes web, práva write a read) a zařadit do ní nového uživatele s vaším loginem (heslo libovolné)
+12) VM MikroTik: vytvořit a použit skin pro uživatele s vaším loginem, který nebude mít přes webové rozhraní dostupné menu System
+13) hAP ac2: Nastavení času a časové zóny
+14) hAP ac2: vypnout CDP/MNDP/LLDP pro všechna rozhraní kromě ether2
+15) hAP ac2: MAC telnet a MAC WinBox server vypnout pro všechna rozhraní kromě ether2
+16) VM MikroTik: vypnout nepotřebné služby pro správu zařízení a změnit port pro SSH
+17) hAP ac2: nastavení DHCP client na rozhraní wifi1
+18) hAP ac2: nastavení SNAT - odchozí rozhraní wifi1, akce masquerade
+19) hAP ac2: připojit rozhrani wifi1 k dostupné bezdrátové síti SSZM
+20) Exportujte textové soubory s konfigurací (přípona rsc), stáhněte je do PC. Z VM MikroTik stáhněte i soubor se skinem (přípona json). Zkontrolujte si, že máte tři soubory a všechny jsou čitelné např. pomocí notepad (příkazy nebo struktura json). Všechny soubory vložte do odevzdávárny.
+
